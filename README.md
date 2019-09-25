@@ -9,4 +9,6 @@
 
 2. 009 --- [视觉SLAM笔记（9） Eigen](https://joveh-h.blog.csdn.net/article/details/101051797)
 
+3. 014 --- [视觉SLAM笔记（14） Eigen几何模块](https://joveh-h.blog.csdn.net/article/details/101281619)
+
 谢谢!
