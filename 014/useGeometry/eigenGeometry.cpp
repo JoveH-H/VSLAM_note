@@ -13,12 +13,12 @@ int main ( int argc, char** argv )
     // 3D 旋转矩阵直接使用 Matrix3d 或 Matrix3f
     Eigen::Matrix3d rotation_matrix = Eigen::Matrix3d::Identity();
     // 旋转向量使用 AngleAxis, 它底层不直接是Matrix，但运算可以当作矩阵（因为重载了运算符）
-    Eigen::AngleAxisd rotation_vector ( M_PI/4, Eigen::Vector3d ( 0,0,1 ) );	//沿 Z 轴旋转 45 度
+    Eigen::AngleAxisd rotation_vector ( M_PI/4, Eigen::Vector3d ( 0,0,1 ) );    //沿 Z 轴旋转 45 度
     cout .precision(3);
-    cout<<"rotation matrix =\n"<<rotation_vector.matrix() <<endl;				//用matrix()转换成矩阵
-	// 也可以直接赋值
+    cout<<"rotation matrix =\n"<<rotation_vector.matrix() <<endl;               //用matrix()转换成矩阵
+    // 也可以直接赋值
     rotation_matrix = rotation_vector.toRotationMatrix();						
-	cout<<"rotation matrix =\n"<<rotation_matrix <<endl;
+    cout<<"rotation matrix =\n"<<rotation_matrix <<endl;
 
     // 用 AngleAxis 可以进行坐标变换
     Eigen::Vector3d v ( 1,0,0 );
@@ -29,7 +29,7 @@ int main ( int argc, char** argv )
     cout<<"(1,0,0) after rotation = "<<v_rotated.transpose()<<endl;
 
     // 欧拉角
-	// 可以将旋转矩阵直接转换成欧拉角
+    // 可以将旋转矩阵直接转换成欧拉角
     Eigen::Vector3d euler_angles = rotation_matrix.eulerAngles ( 2,1,0 ); // ZYX顺序，即roll pitch yaw顺序
     cout<<"yaw pitch roll = "<<euler_angles.transpose()<<endl;
 
