@@ -11,6 +11,8 @@
 
 3. 014 --- [视觉SLAM笔记（14） Eigen几何模块](https://joveh-h.blog.csdn.net/article/details/101281619)
 
-4. 018 --- [视觉SLAM笔记（18） Sophus](https://joveh-h.blog.csdn.net/article/details/101447940)
+4. 018 --- [视觉SLAM笔记（18） Sophus](https://joveh-h.blog.csdn.net/article/details/101670053)
+
+5. 024 --- [视觉SLAM笔记（24） 图像基础操作](https://joveh-h.blog.csdn.net/article/details/101632962)
 
 谢谢!
