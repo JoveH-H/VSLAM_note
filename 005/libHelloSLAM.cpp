@@ -3,5 +3,5 @@ using namespace std;
 
 void printHello()
 {
-    cout<<"Hello SLAM"<<endl;
+    cout << "Hello SLAM" << endl;
 }
