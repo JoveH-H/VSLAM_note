@@ -15,4 +15,6 @@
 
 5. 024 --- [视觉SLAM笔记（24） 图像基础操作](https://joveh-h.blog.csdn.net/article/details/101632962)
 
+6. 025 --- [视觉SLAM笔记（25） 拼接点云](https://joveh-h.blog.csdn.net/article/details/101686641)
+
 谢谢!
