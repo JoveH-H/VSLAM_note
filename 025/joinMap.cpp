@@ -21,19 +21,23 @@ int main(int argc, char** argv)
         cerr << "请在有pose.txt的目录下运行此程序" << endl;
         return 1;
     }
-
+    
+    // 设置外参变换矩阵T（4*4）
     for (int i = 0; i < 5; i++)
     {
-        boost::format fmt("./%s/%d.%s"); //图像文件格式
+        // boost::format 格式化字符串  拼接出图片文件名
+        boost::format fmt("./%s/%d.%s");                                              // 图像文件格式
         colorImgs.push_back(cv::imread((fmt % "color" % (i + 1) % "png").str()));
         depthImgs.push_back(cv::imread((fmt % "depth" % (i + 1) % "pgm").str(), -1)); // 使用-1读取原始图像
 
+        // 读取位姿数据
         double data[7] = { 0 };
         for (auto& d : data)
             fin >> d;
-        Eigen::Quaterniond q(data[6], data[3], data[4], data[5]);
-        Eigen::Isometry3d T(q);
-        T.pretranslate(Eigen::Vector3d(data[0], data[1], data[2]));
+
+        Eigen::Quaterniond q(data[6], data[3], data[4], data[5]);   // 四元数
+        Eigen::Isometry3d T(q);                                     // 变换矩阵T初始化旋转部分
+        T.pretranslate(Eigen::Vector3d(data[0], data[1], data[2])); // T初始化平移向量部分
         poses.push_back(T);
     }
 
@@ -56,20 +60,26 @@ int main(int argc, char** argv)
     for (int i = 0; i < 5; i++)
     {
         cout << "转换图像中: " << i + 1 << endl;
+        // 颜色、深度、位姿T
         cv::Mat color = colorImgs[i];
         cv::Mat depth = depthImgs[i];
         Eigen::Isometry3d T = poses[i];
+        // 已知像素坐标，遍历所有像素（u,v）
         for (int v = 0; v < color.rows; v++)
             for (int u = 0; u < color.cols; u++)
             {
                 unsigned int d = depth.ptr<unsigned short>(v)[u]; // 深度值
                 if (d == 0) continue;                             // 为0表示没有测量到
+                //像素坐标(u,v,d)计算相机坐标系下坐标 point
                 Eigen::Vector3d point;
                 point[2] = double(d) / depthScale;
                 point[0] = (u - cx) * point[2] / fx;
                 point[1] = (v - cy) * point[2] / fy;
+
+                // 相机位姿T计算在世界坐标系下坐标 pointWorld
                 Eigen::Vector3d pointWorld = T * point;
 
+                // pcl点 pointT ，x,y,z,b,g,r
                 PointT p;
                 p.x = pointWorld[0];
                 p.y = pointWorld[1];
@@ -77,12 +87,16 @@ int main(int argc, char** argv)
                 p.b = color.data[v * color.step + u * color.channels()];
                 p.g = color.data[v * color.step + u * color.channels() + 1];
                 p.r = color.data[v * color.step + u * color.channels() + 2];
+
+                // push_back(p)放进去一个个点p，构成了点云pointCloud
                 pointCloud->points.push_back(p);
             }
     }
 
     pointCloud->is_dense = false;
     cout << "点云共有" << pointCloud->size() << "个点." << endl;
+
+    // 拼接点云，点云是指针形式
     pcl::io::savePCDFileBinary("map.pcd", *pointCloud);
     return 0;
 }
