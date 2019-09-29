@@ -1,7 +1,7 @@
 #include <iostream>
 #include <ctime>
-#include <Eigen/Core>	// Eigen 部分
-#include <Eigen/Dense>	// 稠密矩阵的代数运算（逆，特征值等）
+#include <Eigen/Core>    // Eigen 部分
+#include <Eigen/Dense>    // 稠密矩阵的代数运算（逆，特征值等）
 
 #define MATRIX_SIZE 50
 
@@ -70,13 +70,13 @@ int main(int argc, char** argv)
     cout << matrix_33.transpose() << endl;      // 转置
     cout << matrix_33.sum() << endl;            // 各元素和
     cout << matrix_33.trace() << endl;          // 迹
-    cout << 10 * matrix_33 << endl;		// 数乘
+    cout << 10 * matrix_33 << endl;             // 数乘
     cout << matrix_33.inverse() << endl;        // 逆
     cout << matrix_33.determinant() << endl;    // 行列式
 
     // 特征值
     // 实对称矩阵可以保证对角化成功
-    Eigen::SelfAdjointEigenSolver<Eigen::Matrix3d> eigen_solver(matrix_33.transpose()*matrix_33);
+    Eigen::SelfAdjointEigenSolver<Eigen::Matrix3d> eigen_solver(matrix_33.transpose() * matrix_33);
     cout << "Eigen values = \n" << eigen_solver.eigenvalues() << endl;
 
     // 特征向量
@@ -91,9 +91,9 @@ int main(int argc, char** argv)
     Eigen::Matrix< double, MATRIX_SIZE, 1> v_Nd;
     v_Nd = Eigen::MatrixXd::Random(MATRIX_SIZE, 1);
     // 计时
-    clock_t time_stt = clock(); 
+    clock_t time_stt = clock();
     // 直接求逆
-    Eigen::Matrix<double, MATRIX_SIZE, 1> x = matrix_NN.inverse()*v_Nd;
+    Eigen::Matrix<double, MATRIX_SIZE, 1> x = matrix_NN.inverse() * v_Nd;
     cout << "time use in normal inverse is " << 1000 * (clock() - time_stt) / (double)CLOCKS_PER_SEC << "ms" << endl;
 
     // 通常用矩阵分解来求，例如QR分解，速度会快很多
