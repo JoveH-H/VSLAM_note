@@ -7,9 +7,9 @@
 
 1. 005 --- [视觉SLAM笔记（5） 编程基础](https://joveh-h.blog.csdn.net/article/details/101022916)
 
-2. 009 --- [视觉SLAM笔记（9） Eigen](https://joveh-h.blog.csdn.net/article/details/101051797)
+2. 009 --- [视觉SLAM笔记（9） Eigen](https://joveh-h.blog.csdn.net/article/details/101470881)
 
-3. 014 --- [视觉SLAM笔记（14） Eigen几何模块](https://joveh-h.blog.csdn.net/article/details/101281619)
+3. 014 --- [视觉SLAM笔记（14） Eigen几何模块](https://joveh-h.blog.csdn.net/article/details/101599067)
 
 4. 018 --- [视觉SLAM笔记（18） Sophus](https://joveh-h.blog.csdn.net/article/details/101670053)
 
