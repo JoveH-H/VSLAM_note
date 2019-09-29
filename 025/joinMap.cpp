@@ -39,9 +39,9 @@ int main(int argc, char** argv)
 
     // 计算点云并拼接
     // 相机内参 
-    double cx = 325.5;
+    double cx = 325.5;  // 像素坐标系与成像平面之间的原点平移
     double cy = 253.5;
-    double fx = 518.0;
+    double fx = 518.0;  // 焦距
     double fy = 519.0;
     double depthScale = 1000.0;
 
