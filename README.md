@@ -17,4 +17,8 @@
 
 6. 025 --- [视觉SLAM笔记（25） 拼接点云](https://joveh-h.blog.csdn.net/article/details/102362891)
 
+7. 028 --- [视觉SLAM笔记（28） Ceres](https://joveh-h.blog.csdn.net/article/details/102373203)
+
+8. 029 --- [视觉SLAM笔记（29） g2o](https://joveh-h.blog.csdn.net/article/details/102383331)
+
 谢谢!
