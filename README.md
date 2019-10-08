@@ -13,8 +13,8 @@
 
 4. 018 --- [视觉SLAM笔记（18） Sophus](https://joveh-h.blog.csdn.net/article/details/101670053)
 
-5. 024 --- [视觉SLAM笔记（24） 图像基础操作](https://joveh-h.blog.csdn.net/article/details/101632962)
+5. 024 --- [视觉SLAM笔记（24） 图像基础操作](https://joveh-h.blog.csdn.net/article/details/102362765)
 
-6. 025 --- [视觉SLAM笔记（25） 拼接点云](https://joveh-h.blog.csdn.net/article/details/101686641)
+6. 025 --- [视觉SLAM笔记（25） 拼接点云](https://joveh-h.blog.csdn.net/article/details/102362891)
 
 谢谢!
