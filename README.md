@@ -21,4 +21,6 @@
 
 8. 029 --- [视觉SLAM笔记（29） g2o](https://joveh-h.blog.csdn.net/article/details/102383331)
 
+9. 031 --- [视觉SLAM笔记（31） 特征提取和匹配](https://joveh-h.blog.csdn.net/article/details/102396198)
+
 谢谢!
