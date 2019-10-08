@@ -18,14 +18,15 @@ int main(int argc, char** argv)
     Mat img_2 = imread(argv[2], CV_LOAD_IMAGE_COLOR);
 
     //-- 初始化
-    std::vector<KeyPoint> keypoints_1, keypoints_2;
-    Mat descriptors_1, descriptors_2;
-    Ptr<FeatureDetector> detector = ORB::create();
-    Ptr<DescriptorExtractor> descriptor = ORB::create();
-
+    std::vector<KeyPoint> keypoints_1, keypoints_2;      // 创建关键点
+    Mat descriptors_1, descriptors_2;                    // 创建描述子
+    Ptr<FeatureDetector> detector = ORB::create();       // 创建ORB特征点检测
+    Ptr<DescriptorExtractor> descriptor = ORB::create(); // 使用ORB特征来描述特征点
+    Ptr<DescriptorMatcher> matcher = DescriptorMatcher::create("BruteForce-Hamming"); // 设置特征匹配使用汉明距离计算
+    
+    // 设置特征点检测
     // Ptr<FeatureDetector> detector = FeatureDetector::create(detector_name);
     // Ptr<DescriptorExtractor> descriptor = DescriptorExtractor::create(descriptor_name);
-    Ptr<DescriptorMatcher> matcher = DescriptorMatcher::create("BruteForce-Hamming");
 
     //-- 第一步:检测 Oriented FAST 角点位置
     detector->detect(img_1, keypoints_1);
