@@ -5,22 +5,24 @@
 
 视觉SLAM代码例程目录
 
-1. 005 --- [视觉SLAM笔记（5） 编程基础](https://joveh-h.blog.csdn.net/article/details/101022916)
+01. 005 --- [视觉SLAM笔记（5） 编程基础](https://joveh-h.blog.csdn.net/article/details/101022916)
 
-2. 009 --- [视觉SLAM笔记（9） Eigen](https://joveh-h.blog.csdn.net/article/details/101470881)
+02. 009 --- [视觉SLAM笔记（9） Eigen](https://joveh-h.blog.csdn.net/article/details/101470881)
 
-3. 014 --- [视觉SLAM笔记（14） Eigen几何模块](https://joveh-h.blog.csdn.net/article/details/101599067)
+03. 014 --- [视觉SLAM笔记（14） Eigen几何模块](https://joveh-h.blog.csdn.net/article/details/101599067)
 
-4. 018 --- [视觉SLAM笔记（18） Sophus](https://joveh-h.blog.csdn.net/article/details/101670053)
+04. 018 --- [视觉SLAM笔记（18） Sophus](https://joveh-h.blog.csdn.net/article/details/101670053)
 
-5. 024 --- [视觉SLAM笔记（24） 图像基础操作](https://joveh-h.blog.csdn.net/article/details/102362765)
+05. 024 --- [视觉SLAM笔记（24） 图像基础操作](https://joveh-h.blog.csdn.net/article/details/102362765)
 
-6. 025 --- [视觉SLAM笔记（25） 拼接点云](https://joveh-h.blog.csdn.net/article/details/102362891)
+06. 025 --- [视觉SLAM笔记（25） 拼接点云](https://joveh-h.blog.csdn.net/article/details/102362891)
 
-7. 028 --- [视觉SLAM笔记（28） Ceres](https://joveh-h.blog.csdn.net/article/details/102403351)
+07. 028 --- [视觉SLAM笔记（28） Ceres](https://joveh-h.blog.csdn.net/article/details/102403351)
 
-8. 029 --- [视觉SLAM笔记（29） g2o](https://joveh-h.blog.csdn.net/article/details/102403457)
+08. 029 --- [视觉SLAM笔记（29） g2o](https://joveh-h.blog.csdn.net/article/details/102403457)
 
-9. 031 --- [视觉SLAM笔记（31） 特征提取和匹配](https://joveh-h.blog.csdn.net/article/details/102403662)
+09. 031 --- [视觉SLAM笔记（31） 特征提取和匹配](https://joveh-h.blog.csdn.net/article/details/102403662)
+
+10. 033 --- [视觉SLAM笔记（33） 对极约束求解相机运动](https://joveh-h.blog.csdn.net/article/details/)
 
 谢谢!
