@@ -6,10 +6,6 @@
 using namespace std;
 using namespace cv;
 
-/****************************************************
- * 本程序演示了如何使用2D-2D的特征匹配估计相机运动
- * **************************************************/
-
  // 特征提取函数
 void find_feature_matches(
     const Mat& img_1, const Mat& img_2,
