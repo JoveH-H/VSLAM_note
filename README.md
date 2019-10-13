@@ -27,4 +27,6 @@
 
 11. 035 --- [视觉SLAM笔记（35） 三角化求特征点的空间位置](https://joveh-h.blog.csdn.net/article/details/102533597)
 
+12. 037 --- [视觉SLAM笔记（37） 求解 PnP](https://joveh-h.blog.csdn.net/article/details/102536134)
+
 谢谢!
