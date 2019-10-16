@@ -24,7 +24,7 @@ void find_feature_matches(
     std::vector< DMatch >& matches);
 
 // 像素坐标转相机归一化坐标函数
-Point2d pixel2cam(const Point2d& p, const Mat& K);
+Point2f pixel2cam(const Point2d& p, const Mat& K);
 
 // 光束法平差函数
 void bundleAdjustment(
@@ -36,9 +36,9 @@ void bundleAdjustment(
 
 int main(int argc, char** argv)
 {
-    if (argc != 5)
+    if (argc != 4)
     {
-        cout << "usage: pose_estimation_3d2d img1 img2 depth1 depth2" << endl;
+        cout << "usage: pose_estimation_3d2d img1 img2 depth1" << endl;
         return 1;
     }
 
@@ -72,11 +72,11 @@ int main(int argc, char** argv)
 
     // 调用OpenCV 的 PnP 求解，可选择EPNP，DLS等方法
     Mat r, t;
-    solvePnP(pts_3d, pts_2d, K, Mat(), r, t, false); 
+    solvePnP(pts_3d, pts_2d, K, Mat(), r, t, false);
 
     // r为旋转向量形式，用Rodrigues公式转换为矩阵
     Mat R;
-    cv::Rodrigues(r, R); 
+    cv::Rodrigues(r, R);
 
     cout << "R=" << endl << R << endl;
     cout << "t=" << endl << t << endl;
@@ -152,15 +152,18 @@ void bundleAdjustment(
     const Mat& K,
     Mat& R, Mat& t)
 {
-    // 初始化g2o
+    // 构建图优化，先设定g2o
     typedef g2o::BlockSolver< g2o::BlockSolverTraits<6, 3> > Block;  // pose 维度为 6, landmark 维度为 3
     Block::LinearSolverType* linearSolver = new g2o::LinearSolverCSparse<Block::PoseMatrixType>(); // 线性方程求解器
-    Block* solver_ptr = new Block(linearSolver);     // 矩阵块求解器
-    g2o::OptimizationAlgorithmLevenberg* solver = new g2o::OptimizationAlgorithmLevenberg(solver_ptr);
-    g2o::SparseOptimizer optimizer;
-    optimizer.setAlgorithm(solver);
+    Block* solver_ptr = new Block(std::unique_ptr<Block::LinearSolverType>(linearSolver));         // 矩阵块求解器
 
-    // vertex
+    // 梯度下降方法，从GN, LM, DogLeg 中选
+    g2o::OptimizationAlgorithmLevenberg* solver = new g2o::OptimizationAlgorithmLevenberg(std::unique_ptr<Block>(solver_ptr));
+    g2o::SparseOptimizer optimizer;   // 图模型
+    optimizer.setAlgorithm(solver);   // 设置求解器
+    optimizer.setVerbose(true);       // 打开调试输出
+
+    // 增加顶点
     g2o::VertexSE3Expmap* pose = new g2o::VertexSE3Expmap(); // camera pose
     Eigen::Matrix3d R_mat;
     R_mat <<
@@ -180,7 +183,7 @@ void bundleAdjustment(
         g2o::VertexSBAPointXYZ* point = new g2o::VertexSBAPointXYZ();
         point->setId(index++);
         point->setEstimate(Eigen::Vector3d(p.x, p.y, p.z));
-        point->setMarginalized(true); // g2o 中必须设置 marg 参见第十讲内容
+        point->setMarginalized(true); // g2o 中必须设置 marg
         optimizer.addVertex(point);
     }
 
@@ -191,7 +194,8 @@ void bundleAdjustment(
     camera->setId(0);
     optimizer.addParameter(camera);
 
-    // edges
+
+    // 增加边
     index = 1;
     for (const Point2f p : points_2d)
     {
@@ -206,14 +210,15 @@ void bundleAdjustment(
         index++;
     }
 
+    // 执行优化
     chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
-    optimizer.setVerbose(true);
     optimizer.initializeOptimization();
     optimizer.optimize(100);
     chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
     chrono::duration<double> time_used = chrono::duration_cast<chrono::duration<double>> (t2 - t1);
     cout << "optimization costs time: " << time_used.count() << " seconds." << endl;
 
+    // 输出优化值
     cout << endl << "after optimization:" << endl;
     cout << "T=" << endl << Eigen::Isometry3d(pose->estimate()).matrix() << endl;
 }
