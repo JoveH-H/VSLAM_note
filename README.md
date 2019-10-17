@@ -29,4 +29,6 @@
 
 12. 037 --- [视觉SLAM笔记（37） 求解 PnP](https://joveh-h.blog.csdn.net/article/details/102595098)
 
+13. 039 --- [视觉SLAM笔记（39） 求解 ICP](https://joveh-h.blog.csdn.net/article/details/102615449)
+
 谢谢!
