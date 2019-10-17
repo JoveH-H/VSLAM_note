@@ -24,7 +24,7 @@ void find_feature_matches(
     std::vector< DMatch >& matches);
 
 // 像素坐标转相机归一化坐标函数
-Point2f pixel2cam(const Point2d& p, const Mat& K);
+Point2d pixel2cam(const Point2d& p, const Mat& K);
 
 // 光束法平差函数
 void bundleAdjustment(
@@ -136,7 +136,7 @@ void find_feature_matches(const Mat& img_1, const Mat& img_2,
 }
 
 // 像素坐标转相机归一化坐标函数
-Point2f pixel2cam(const Point2d& p, const Mat& K)
+Point2d pixel2cam(const Point2d& p, const Mat& K)
 {
     return Point2f
     (
