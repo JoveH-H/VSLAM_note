@@ -30,7 +30,7 @@ void triangulation(
 );
 
 // 像素坐标转相机归一化坐标函数
-Point2f pixel2cam(const Point2d& p, const Mat& K);
+Point2d pixel2cam(const Point2d& p, const Mat& K);
 
 int main(int argc, char** argv)
 {
@@ -236,7 +236,7 @@ void triangulation(
 }
 
 // 像素坐标转相机归一化坐标函数
-Point2f pixel2cam(const Point2d& p, const Mat& K)
+Point2d pixel2cam(const Point2d& p, const Mat& K)
 {
     return Point2f
     (
