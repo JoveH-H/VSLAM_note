@@ -157,7 +157,7 @@ void bundleAdjustment(
     Block::LinearSolverType* linearSolver = new g2o::LinearSolverCSparse<Block::PoseMatrixType>(); // 线性方程求解器
     Block* solver_ptr = new Block(std::unique_ptr<Block::LinearSolverType>(linearSolver));         // 矩阵块求解器
 
-    // 梯度下降方法，从GN, LM, DogLeg 中选
+    // 梯度下降方法，GN
     g2o::OptimizationAlgorithmLevenberg* solver = new g2o::OptimizationAlgorithmLevenberg(std::unique_ptr<Block>(solver_ptr));
     g2o::SparseOptimizer optimizer;   // 图模型
     optimizer.setAlgorithm(solver);   // 设置求解器
