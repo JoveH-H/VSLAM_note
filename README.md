@@ -31,4 +31,8 @@
 
 13. 039 --- [视觉SLAM笔记（39） 求解 ICP](https://joveh-h.blog.csdn.net/article/details/102615449)
 
+13. 042 --- [视觉SLAM笔记（42） 光流法跟踪特征点](https://joveh-h.blog.csdn.net/article/details/102711864)
+
+13. 044 --- [视觉SLAM笔记（44） RGB-D 的直接法](https://joveh-h.blog.csdn.net/article/details/102825462)
+
 谢谢!
