@@ -1,0 +1,13 @@
+%YAML:1.0
+# data
+# tum数据集目录
+dataset_dir: /home/ciang/dataset/rgbd_dataset_freiburg1_xyz
+
+# 相机内参
+# fr1
+camera.fx: 517.3
+camera.fy: 516.5
+camera.cx: 325.1
+camera.cy: 249.7
+
+camera.depth_scale: 5000
