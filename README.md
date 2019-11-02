@@ -31,8 +31,14 @@
 
 13. 039 --- [视觉SLAM笔记（39） 求解 ICP](https://joveh-h.blog.csdn.net/article/details/102615449)
 
-13. 042 --- [视觉SLAM笔记（42） 光流法跟踪特征点](https://joveh-h.blog.csdn.net/article/details/102711864)
+14. 042 --- [视觉SLAM笔记（42） 光流法跟踪特征点](https://joveh-h.blog.csdn.net/article/details/102711864)
 
-13. 044 --- [视觉SLAM笔记（44） RGB-D 的直接法](https://joveh-h.blog.csdn.net/article/details/102825462)
+15. 044 --- [视觉SLAM笔记（44） RGB-D 的直接法](https://joveh-h.blog.csdn.net/article/details/102825462)
+
+16. 045 --- [视觉SLAM笔记（45） 搭建 VO 框架](https://joveh-h.blog.csdn.net/article/details/102875191)
+
+17. 046 --- [视觉SLAM笔记（46） 基本的 VO](https://joveh-h.blog.csdn.net/article/details/102875250)
+
+18. 047 --- [视觉SLAM笔记（47） 优化 PnP 的结果](https://joveh-h.blog.csdn.net/article/details/102875271)
 
 谢谢!
