@@ -65,7 +65,6 @@ namespace myslam
         void addKeyFrame();           // 添加关键帧
         bool checkEstimatedPose();    // 检查估计姿势
         bool checkKeyFrame();         // 检查关键帧
-
     };
 }
 
