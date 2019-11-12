@@ -41,4 +41,6 @@
 
 18. 047 --- [视觉SLAM笔记（47） 优化 PnP 的结果](https://joveh-h.blog.csdn.net/article/details/102875271)
 
+19. 048 --- [视觉SLAM笔记（48） 局部地图](https://joveh-h.blog.csdn.net/article/details/102928146)
+
 谢谢!
