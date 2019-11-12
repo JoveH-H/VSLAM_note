@@ -8,10 +8,7 @@ cmake ..
 make
 
 # How to run the code :
-
-cd ./build
-
-./ceres_customBundle -input ../data/problem-.....txt
+./g2o_customBundle -input ../data/problem-16-22106-pre.txt
 
 # see more detail settings by :
-./ceres_customBundle -help
+./g2o_customBundle -help
