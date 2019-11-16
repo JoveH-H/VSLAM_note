@@ -43,4 +43,10 @@
 
 19. 048 --- [视觉SLAM笔记（48） 局部地图](https://joveh-h.blog.csdn.net/article/details/102928146)
 
+20. 053 --- [视觉SLAM笔记（53） g2o 操作后端优化](https://joveh-h.blog.csdn.net/article/details/103095440)
+
+21. 054 --- [视觉SLAM笔记（54） Ceres 操作后端优化](https://joveh-h.blog.csdn.net/article/details/103095484)
+
+22. 056 --- [视觉SLAM笔记（56） 位姿图优化](https://joveh-h.blog.csdn.net/article/details/103095567)
+
 谢谢!
