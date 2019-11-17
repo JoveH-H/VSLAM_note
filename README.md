@@ -49,4 +49,8 @@
 
 22. 056 --- [视觉SLAM笔记（56） 位姿图优化](https://joveh-h.blog.csdn.net/article/details/103095567)
 
+23. 058 --- [视觉SLAM笔记（58） 字典](https://joveh-h.blog.csdn.net/article/details/103106478)
+
+24. 059 --- [视觉SLAM笔记（59） 相似度计算](https://joveh-h.blog.csdn.net/article/details/103106494)
+
 谢谢!
