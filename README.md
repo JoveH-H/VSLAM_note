@@ -1,9 +1,14 @@
-# 视觉SLAM笔记例程
-本代码库为博客专栏[《视觉SLAM笔记》](https://joveh-h.blog.csdn.net/article/category/9357175)的例程代码库
-
 <div align=center><img src="https://img-blog.csdnimg.cn/20190917102044674.png" width="150" height="150" /></div>
 
-视觉SLAM代码例程目录
+![AppVeyor](https://img.shields.io/badge/build-passing-brightgreen)
+
+欢迎访问 VSLAM_note !
+
+VSLAM_note 是CSDN博客专栏[《视觉SLAM笔记》](https://joveh-h.blog.csdn.net/article/category/9357175)的例程代码库
+
+《视觉SLAM笔记》博客专栏收集了在学习由 高翔/张涛/刘毅/颜沁睿 著作的书籍 [《视觉SLAM十四讲：从理论到实践》](https://baike.baidu.com/item/%E8%A7%86%E8%A7%89SLAM%E5%8D%81%E5%9B%9B%E8%AE%B2) 过程中所收集和整理的笔记博客
+
+# 例程目录
 
 01. 005 --- [视觉SLAM笔记（5） 编程基础](https://joveh-h.blog.csdn.net/article/details/101022916)
 
@@ -52,5 +57,39 @@
 23. 058 --- [视觉SLAM笔记（58） 字典](https://joveh-h.blog.csdn.net/article/details/103106478)
 
 24. 059 --- [视觉SLAM笔记（59） 相似度计算](https://joveh-h.blog.csdn.net/article/details/103106494)
+
+25. 062 --- [视觉SLAM笔记（62） 单目稠密重建](https://joveh-h.blog.csdn.net/article/details/103215672)
+
+26. 063 --- [视觉SLAM笔记（63） RGB-D 稠密建图](https://joveh-h.blog.csdn.net/article/details/103215721)
+
+27. 064 --- [视觉SLAM笔记（64） 八叉树地图](https://joveh-h.blog.csdn.net/article/details/103215769)
+
+# 版本
+
+| 发布版本 | 发布模块 |
+| --- | --- |
+| `[1.0]` | `[所有配套例程文件]` |
+
+> 1.0版本简单的整理、修改、添加和测试了CSDN博客专栏《视觉SLAM笔记》中博文对应的例程
+
+> 接下来会根据空余时间会安排重新优化博文内容且更新例程，争取完善代码，降低学习和理解的难度，并发布2.0版本。
+
+# 运行环境
+> Ubuntu版本 `[16.04 LTS]`
+
+> 非常用的组件，在对应的博客中会提及且说明安装方式
+
+# 问题
+欢迎以 [GitHub Issues](https://github.com/JoveH-H/VSLAM_note/issues) 的形式提交问题和bug报告
+
+# 声明
+免责声明
+> 以任何方式登录平台或直接、间接使用平台代码，均视为自愿接受免责声明
+
+参考文献
+> 高翔, 张涛, 颜沁睿, 刘毅, 视觉SLAM十四讲：从理论到实践, 电子工业出版社, 2017
+
+# 版权和许可
+VSLAM_note 是在 [GNU General Public License v3.0 许可](https://github.com/JoveH-H/VSLAM_note/blob/master/LICENSE) 下提供的
 
 谢谢!
