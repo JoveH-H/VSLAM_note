@@ -67,6 +67,6 @@ VSLAM_note 是CSDN博客专栏[《视觉SLAM笔记》](https://joveh-h.blog.csdn
 > 高翔, 张涛, 颜沁睿, 刘毅, 视觉SLAM十四讲：从理论到实践, 电子工业出版社, 2017
 
 ## 版权和许可
-VSLAM_note 是在 [GNU General Public License v3.0 许可](https://github.com/JoveH-H/VSLAM_note/blob/master/LICENSE) 下提供的
+VSLAM_note 由 [GNU General Public License v3.0 许可](https://github.com/JoveH-H/VSLAM_note/blob/master/LICENSE) 提供
 
 谢谢!
