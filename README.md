@@ -1,8 +1,8 @@
 <div align=center><img src="https://img-blog.csdnimg.cn/20190917102044674.png" width="150" height="150" /></div>
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/badge/license-%20GPL--3.0-brightgreen)
-![Release](https://img.shields.io/badge/release-v1.0-yellowgreen)
+![License](https://img.shields.io/badge/license-%20GPL--3.0-blue)
+![Release](https://img.shields.io/badge/release-v1.0-blue)
 
 欢迎访问 VSLAM_note !
 
